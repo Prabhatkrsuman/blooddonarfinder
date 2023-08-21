@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/userConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="0dp"
+    android:paddingTop="0dp"
+    android:paddingRight="0dp"
+    android:paddingBottom="0dp"
+    tools:context=".fragment.MapsDonarDetailsActivity">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context="com.example.blooddonarfinder.fragment.MapsDonarDetailsActivity">
+
+        <TextView
+            android:id="@+id/titleShows"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#6517EF"
+            android:padding="10dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#FAF6F6"
+            android:textSize="18dp"
+            android:textStyle="bold|italic" />
+
+    </fragment>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

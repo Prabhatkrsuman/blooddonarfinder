@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/nav_home" />
+        <item
+            android:id="@+id/nav_details"
+            android:icon="@drawable/ic_details_black_24dp"
+            android:title="@string/nav_details" />
+        <item
+            android:id="@+id/nav_your_request"
+            android:icon="@drawable/ic_blood_request_24dp"
+            android:title="@string/nav_your_request" />
+        <item
+            android:id="@+id/nav_notification"
+            android:icon="@drawable/ic_notification_black_24dp"
+            android:title="@string/nav_notifications" />
+
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_setting_black_24dp"
+            android:title="@string/nav_setting" />
+
+        <item
+            android:id="@+id/nav_log_out"
+            android:icon="@drawable/ic_logout_black_24dp"
+            android:title="@string/nav_logout" />
+    </group>
+
+    <item android:title="Other" >
+        <menu>
+            <item
+                android:id="@+id/nav_about_us"
+                android:title="@string/nav_about_us" />
+            <item
+                android:id="@+id/nav_contact_us"
+                android:title="@string/nav_contact_us" />
+            <item
+                android:id="@+id/nav_privacy_policy"
+                android:title="@string/privacy_policy" />
+            <item
+                android:id="@+id/nav_help_and_feedback"
+                android:title="@string/nav_help_feedback" />
+        </menu>
+    </item>
+
+</menu>

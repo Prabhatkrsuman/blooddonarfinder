@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserDetailsActivity">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:padding="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--first name and last name-->
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/first_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:autofillHints="First Name"
+                android:background="@drawable/edit_text_border"
+                android:ems="8"
+                android:gravity="start"
+                android:hint="First Name"
+                android:inputType="textPersonName"
+                android:padding="8dp"
+
+                app:layout_constraintEnd_toStartOf="@+id/last_name"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+                <!--app:binding="@{userdetail.firstName}"-->
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/last_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints="Last Name"
+                android:background="@drawable/edit_text_border"
+                android:ems="8"
+                android:gravity="start"
+                android:hint="Last Name"
+                android:inputType="textPersonName"
+                android:padding="8dp"
+
+                app:layout_constraintBaseline_toBaselineOf="@+id/first_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/first_name"
+                />
+
+            <!--app:binding="@{userdetail.lastName}"-->
+
+            <!--Email-->
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:autofillHints="Email"
+                android:background="@drawable/edit_text_border"
+                android:ems="10"
+                android:gravity="start"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:padding="8dp"
+
+                app:layout_constraintEnd_toEndOf="@+id/last_name"
+                app:layout_constraintStart_toStartOf="@+id/first_name"
+                app:layout_constraintTop_toBottomOf="@+id/first_name"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/mobile_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/darker_gray"
+                android:ems="10"
+                android:gravity="start"
+                android:padding="8dp"
+                android:text=""
+                android:textColor="#101010"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="@+id/email"
+                app:layout_constraintStart_toStartOf="@+id/email"
+                app:layout_constraintTop_toBottomOf="@+id/email" />
+
+            <!--app:binding="@{userdetail.email}"-->
+
+
+            <!--Blood group-->
+            <Spinner
+                android:id="@+id/blood_group_drop_down"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edit_text_border"
+                android:gravity="center"
+                android:padding="16dp"
+                android:entries="@array/blood_group"
+                android:prompt="@string/blood_prompt"
+
+                app:layout_constraintEnd_toEndOf="@+id/mobile_number"
+                app:layout_constraintStart_toStartOf="@+id/mobile_number"
+                app:layout_constraintTop_toBottomOf="@+id/mobile_number"
+                style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/select_birth_date_EditText"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="16dp"
+                android:background="#EE93EDAA"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_date_range_black_24dp"
+                android:drawableLeft="@drawable/ic_date_range_black_24dp"
+                android:drawablePadding="5dp"
+                android:editable="false"
+                android:ems="10"
+                android:focusable="false"
+                android:hint="Select Date of Birth"
+                android:longClickable="false"
+
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="@+id/blood_group_drop_down"
+                app:layout_constraintStart_toStartOf="@+id/blood_group_drop_down"
+                app:layout_constraintTop_toBottomOf="@+id/blood_group_drop_down" />
+
+
+
+            <!--android:observableString="@{userdetail.bloodGroup}"-->
+
+         <!--   <Button
+                android:id="@+id/select_birth_date_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:drawableEnd="@drawable/ic_date_range_black_24dp"
+                android:drawableRight="@drawable/ic_date_range_black_24dp"
+                android:hint="@string/hint_birth_date"
+                android:onClick="@{()->presenter.onDobButtonClick()}"
+                android:text="@{Util.convertDateToDobFormat(userdetail.dob.get())}"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="@+id/blood_group_drop_down"
+                app:layout_constraintStart_toStartOf="@+id/blood_group_drop_down"
+                app:layout_constraintTop_toBottomOf="@+id/blood_group_drop_down"
+                style="@style/Widget.AppCompat.Button.Colored"
+                /> -->
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/tv_location_picker"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edit_text_border"
+                android:drawableEnd="@drawable/ic_location_on_red_24dp"
+                android:drawableRight="@drawable/ic_location_on_red_24dp"
+                android:hint="Your Location"
+                android:padding="30dp"
+                app:layout_constraintEnd_toEndOf="@+id/select_birth_date_EditText"
+                app:layout_constraintStart_toStartOf="@+id/select_birth_date_EditText"
+                app:layout_constraintTop_toBottomOf="@+id/select_birth_date_EditText"
+                />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/tv_gender_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Select Gender :"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintStart_toStartOf="@+id/tv_location_picker"
+                app:layout_constraintTop_toBottomOf="@+id/tv_location_picker"
+                />
+
+
+            <RadioGroup
+                android:id="@+id/gender_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:title="Gender"
+
+
+
+                app:layout_constraintTop_toBottomOf="@+id/tv_gender_label"
+                >
+
+                <!--android:binding="@{userdetail.isMale}"-->
+
+                <RadioButton
+                    android:id="@+id/rb_male"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="Male"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_female"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Female"
+                    android:textSize="14sp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                <RadioButton
+                    android:id="@+id/rb_transgender"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TransGender"
+                    android:textSize="14sp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/create_profile_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Save_Details"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/gender_radio_group"
+                app:layout_constraintStart_toStartOf="@+id/tv_gender_label"
+                app:layout_constraintTop_toBottomOf="@+id/gender_radio_group"
+                app:layout_constraintVertical_bias="0.13999999"
+                style="@style/Widget.AppCompat.Button.Colored"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

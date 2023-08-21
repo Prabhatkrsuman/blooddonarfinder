@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1088246617139",
+    "firebase_url": "https://blood-donar-finder-632fa.firebaseio.com",
+    "project_id": "blood-donar-finder-632fa",
+    "storage_bucket": "blood-donar-finder-632fa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1088246617139:android:d38738aee5b7faf1133f46",
+        "android_client_info": {
+          "package_name": "com.example.blooddonarfinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1088246617139-4pr51p3a7853pbi2hl8nnn65pgnsjocf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.blooddonarfinder",
+            "certificate_hash": "9f4d9219b7944037054c6a0b3bda6079fb34cb87"
+          }
+        },
+        {
+          "client_id": "1088246617139-mv7q45vvi3j8t3etv6hgk6pk67k40vfq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDX9DhlkJ0rERcbxwunFjNTA517G0iOqqY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1088246617139-mv7q45vvi3j8t3etv6hgk6pk67k40vfq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

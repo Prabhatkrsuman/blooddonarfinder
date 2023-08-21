@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">Blood Donar Finder</string>
+    <string name="blood_prompt">Choose your Blood Group</string>
+
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+
+    <!-- Change the following strings as required -->
+    <string name="back4app_app_id">HFwN4geUW0sPtYMNudS2jSIdAZnEc8isEgJOflm9</string>
+    <string name="back4app_client_key">nRgPN0eLhQa8l5ebIIqt4vw9nGd9NXnRz3anYM0Q</string>
+
+    <!--UserDetailActivity-->
+    <string name="msg_sign_up_location_message">Your current location is required to sign you up so that you can get benefit of our loved community by sharing with them where you are.</string>
+    <string name="msg_never_ask_sign_up">Sign up process cannot be completed without location access. Please navigate to application settings -> Permissions and grant location permission.</string>
+    <string name="msg_first_name_empty">First name cannot be empty.</string>
+    <string name="msg_last_name_empty">Last name cannot be empty.</string>
+    <string name="msg_email_empty">Email cannot be empty.</string>
+    <string name="msg_invalid_email">Please enter a valid email address.</string>
+    <string name="msg_invalid_age">Please select your date of birth.</string>
+    <string name="msg_invalid_location">Your location is not yet selected.</string>
+
+    <string name="title_activity_profile">ProfileActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="openDrawer">open_drawer</string>
+    <string name="closeDrawer">close_drawer</string>
+
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <!-- Navigation Drawer menu labels -->
+    <string name="nav_home">Home</string>
+    <string name="nav_details">Details</string>
+    <string name="nav_your_request">Your Request</string>
+    <string name="nav_notifications">Notifications</string>
+    <string name="nav_setting">Setting</string>
+    <string name="nav_logout">LogOut</string>
+    <!--Others -->
+    <string name="nav_about_us">About Us</string>
+    <string name="nav_contact_us">Contact Us</string>
+    <string name="nav_privacy_policy">Privacy Policy</string>
+    <string name="nav_help_feedback">Help and Feedback</string>
+
+    <!-- Toolbar titles when navigation menu item is selected -->
+    <string-array name="nav_item_activity_titles">
+        <item>Home</item>
+        <item>Details</item>
+        <item>Your Request</item>
+        <item>Notifications</item>
+        <item>Settings</item>
+        <item>logOut</item>
+
+        <!--  <item>About Us</item>
+        <item>Privacy Policy</item>
+        <item>Help and Feedback</item> -->
+    </string-array>
+
+    <string name="activity_title_about_us">About Us</string>
+    <string name="activity_title_contact_us">Contact Us</string>
+    <string name="activity_title_privacy_policy">Privacy Policy</string>
+    <string name="activity_title_help_and_feedback">Help and Feedback</string>
+    <string name="action_clear_all">Clear All</string>
+    <string name="action_logout">Logout</string>
+    <string name="action_mark_all_read">Mark All as Read</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_home_tabbed">HomeTabbedActivity</string>
+    <string name="tab_text_1">Request</string>
+    <string name="tab_text_2">News Feed</string>
+    <string name="tab_text_3">Donate</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_user_location_request">Map</string>
+    <string name="title_activity_driver_location">Map</string>
+    <string name="title_activity_donar_donate_blood">Map</string>
+    <string name="title_activity_request_map_view">Map</string>
+    <string name="title_activity_maps_donar_details">Map</string>
+
+</resources>

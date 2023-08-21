@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#DADACFBF">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:padding="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/blood_donar_cover" />
+
+            <!--Blood group-->
+            <Spinner
+                android:id="@+id/blood_group_drop_down"
+                style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/spinner_icon"
+                android:backgroundTint="#D8AEAE"
+                android:entries="@array/request_blood"
+                android:gravity="center"
+                android:padding="16dp"
+                android:prompt="@string/blood_prompt"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintStart_toStartOf="@+id/imageView"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <TextView
+                android:id="@+id/blood_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Quantity of blood: "
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintStart_toStartOf="@+id/blood_group_drop_down"
+                app:layout_constraintTop_toBottomOf="@+id/blood_group_drop_down" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/blood_quant"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="12dp"
+                android:autofillHints="100 ml"
+                android:background="@drawable/edit_text_border"
+                android:ems="10"
+                android:hint="100 ml"
+                android:inputType="text"
+                android:padding="8dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintEnd_toEndOf="@+id/blood_group_drop_down"
+                app:layout_constraintStart_toEndOf="@+id/blood_quantity"
+                app:layout_constraintTop_toBottomOf="@+id/blood_group_drop_down"/>
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:background="@drawable/edit_text_border"
+                android:drawableEnd="@drawable/ic_desc_image_24dp"
+                android:drawableRight="@drawable/ic_desc_image_24dp"
+                android:hint="Optional\n\nWhy you need blood?"
+                android:padding="30dp"
+                app:layout_constraintEnd_toEndOf="@+id/blood_quant"
+                app:layout_constraintStart_toStartOf="@+id/blood_quantity"
+                app:layout_constraintTop_toBottomOf="@+id/blood_quantity" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/tv_location_picker"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edit_text_border"
+                android:drawableEnd="@drawable/ic_location_on_red_24dp"
+                android:drawableRight="@drawable/ic_location_on_red_24dp"
+                android:hint="Your Location"
+                android:padding="30dp"
+                app:layout_constraintEnd_toEndOf="@+id/description"
+                app:layout_constraintStart_toStartOf="@+id/description"
+                app:layout_constraintTop_toBottomOf="@+id/description"
+                />
+
+
+            <Button
+                android:id="@+id/request_blood"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@android:color/holo_purple"
+                android:text="Request"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tv_location_picker"
+                app:layout_constraintStart_toStartOf="@+id/tv_location_picker"
+                app:layout_constraintTop_toBottomOf="@+id/tv_location_picker"
+                app:layout_constraintVertical_bias="0.13999999" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
